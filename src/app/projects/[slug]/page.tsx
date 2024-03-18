@@ -1,28 +1,61 @@
+import { Metadata } from "next";
+// import { cache } from "react";
 import Image from "next/image";
+
 import { Projects } from "../_components/data";
 import BreadCrumbs from "../_components/BreadCrumbs";
 import { notFound } from "next/navigation";
 import Button from "@/_components/form/Button";
 
-const SingleProjectPage = ({ params }: { params: { slug: string } }) => {
-  const data = Projects.find((project) => project.slug === params.slug);
+export async function generateStaticParams() {
+  // const data = Projects.find((project) => project.slug === slug);
+
+  return Projects.map((project) => project.slug);
+}
+
+// If you are using an ORM to call DB, this prevents duplication of calls, but using fetchAPI does not require this
+// const getData = cache(
+//   async ({ params: { slug } }: { params: { slug: string } }) => {
+//     const data = Projects.find((project) => project.slug === slug);
+//   }
+// );
+
+export async function generateMetadata({
+  params: { slug },
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const data = Projects.find((project) => project.slug === slug);
+
+  if (data) {
+    return {
+      title: data?.name,
+      description: data?.desc,
+      openGraph: {
+        // had to do ?.src cos it's StaticImageData for now
+        images: [{ url: data?.image?.src }],
+      },
+    };
+  }
+  return {};
+}
+
+const SingleProjectPage = ({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) => {
+  const data = Projects.find((project) => project.slug === slug);
 
   if (!data) {
     return notFound();
   }
   return (
     <div className="py-28">
-      <h2 className="px-4 text-[48px] text-purple-light text-center font-normal my-10">
+      <h2 className="px-4 text-[36px] sm:text-[48px] text-purple-light text-center font-normal my-10">
         {data.name}
       </h2>
-      <figure
-        className="w-[100vw] h-80 relative mt-14 block border-t border-b border-slate-100"
-        style={
-          {
-            // boxShadow: "0px 5px 5px 0px rgba(25, 118, 210, 0.09)",
-          }
-        }
-      >
+      <figure className="w-[100vw] h-80 relative mt-14 block border-t border-b border-slate-100">
         <Image src={data.image} alt={data.name} fill sizes="500vw" priority />
       </figure>
       <div className="max-w-5xl mx-auto px-4">

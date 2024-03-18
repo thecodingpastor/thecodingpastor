@@ -1,6 +1,7 @@
 import { LessThan, Mike } from "@/assets";
 import Button from "@/_components/form/Button";
 import Image from "next/image";
+import { Metadata } from "next";
 
 const journey = [
   {
@@ -24,6 +25,10 @@ const journey = [
     ],
   },
 ];
+
+export const metadata: Metadata = {
+  title: "About",
+};
 const AboutPage = () => {
   return (
     <div className="pt-20 relative">
@@ -35,7 +40,7 @@ const AboutPage = () => {
             </h2>
             <p className="px-4">
               I am Michael Ayeni, <br /> a dedicated full stack web developer
-              from in Lagos Nigeria, with a profound commitment to crafting
+              from Lagos Nigeria, with a profound commitment to crafting
               exceptional digital experiences. My professional ethos is deeply
               rooted in both my faith and my love for innovative technology.
             </p>

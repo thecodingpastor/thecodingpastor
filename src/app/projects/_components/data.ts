@@ -19,7 +19,7 @@ import {
 export const Projects = [
   {
     id: "2",
-    name: "Early Childhoold Learning",
+    name: "Early Childhood Learning",
     desc: "Anuoluwapo is a distinguished Early Childhood Educator, boasting of over a decade of experience in the classroom and a certification in Elocution. She harbors a deep-seated passion for guiding children towards their utmost potential.",
     image: AMA,
     logo: LogoAMA,
@@ -40,7 +40,7 @@ export const Projects = [
     images: [],
     more: [
       "The most difficult aspect of this project was pulling off this design. This made me delve deep into the nitty-gritties of CSS.In the end it was worth the stress.",
-      "This web app was built for a teacher, that intends to promote her courses and educate early years learners and their parents on the current trends in the early childhoold education space.",
+      "This web app was built for a teacher, that intends to promote her courses and educate early years learners and their parents on the current trends in the early childhood education space.",
       "I also built an admin dashboard where the site owner was able to Create, Read, Update and Delete blogs, courses and resources for parents. I also worked with the mailchimp api in this project, which was my first time.",
     ],
   },

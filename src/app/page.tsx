@@ -6,48 +6,62 @@ import Button from "@/_components/form/Button";
 import classes from "./Home.module.scss";
 
 export default function Home() {
-  let background: React.ReactNode;
+  let background: React.ReactNode = (
+    <Image
+      alt=""
+      src={BG_Home}
+      width={1000}
+      height={1000}
+      sizes="500vw"
+      style={{
+        position: "fixed",
+        width: "100vw",
+        height: "100vh",
+        zIndex: "-1",
+      }}
+    />
+  );
 
-  if (typeof window !== "undefined" && window.navigator.platform === "iPhone") {
-    background = (
-      <Image
-        alt=""
-        src={BG_Home}
-        width={1000}
-        height={1000}
-        sizes="500vw"
-        style={{
-          position: "fixed",
-          width: "100vw",
-          height: "100vh",
-          zIndex: "-1",
-        }}
-      />
-    );
-  } else {
-    background = (
-      <video
-        className=""
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: "fixed",
-          width: "100vw",
-          height: "100vh",
-          objectFit: "cover",
-          zIndex: "-1",
-        }}
-      >
-        <source
-          src="https://utfs.io/f/92977a7b-c4be-4a5d-b5c8-2f95ac424805-z2yfg9.mp4"
-          type="video/mp4"
-        />
-        {/* <source src="back_vid.mp4" type="video/mp4" /> */}
-      </video>
-    );
-  }
+  // if (typeof window !== "undefined" && window.navigator.platform === "iPhone") {
+  //   background = (
+  //     <Image
+  //       alt=""
+  //       src={BG_Home}
+  //       width={1000}
+  //       height={1000}
+  //       sizes="500vw"
+  //       style={{
+  //         position: "fixed",
+  //         width: "100vw",
+  //         height: "100vh",
+  //         zIndex: "-1",
+  //       }}
+  //     />
+  //   );
+  // } else {
+  //   background = (
+  //     <video
+  //       className=""
+  //       autoPlay
+  //       loop
+  //       muted
+  //       playsInline
+  //       style={{
+  //         position: "fixed",
+  //         width: "100vw",
+  //         height: "100vh",
+  //         objectFit: "cover",
+  //         zIndex: "-1",
+  //       }}
+  //     >
+  //       <source
+  //         src="https://utfs.io/f/92977a7b-c4be-4a5d-b5c8-2f95ac424805-z2yfg9.mp4"
+  //         type="video/mp4"
+  //       />
+  //       {/* <source src="back_vid.mp4" type="video/mp4" /> */}
+  //     </video>
+  //   );
+  // }
 
   return (
     <div className={classes.Container}>

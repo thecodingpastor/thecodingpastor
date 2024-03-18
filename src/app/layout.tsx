@@ -9,11 +9,14 @@ import ToastContainer from "@/_components/Toast/ToastContainer";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Michael-Ayeni",
+    template: "%s - Michael Ayeni",
     default: "Michael Ayeni",
   },
   description:
-    "The official website of Michael Ayeni, a full stack developer. Works with Node, React, React Native, Typescript, MongoDB, MySQL.",
+    "The official website of Michael Ayeni, a full stack developer. Works with Node, React, React Native, Typescript, MongoDB, MySQL. He is also know as the coding pastor (thecodingpastor)",
+  twitter: {
+    card: "summary_large_image",
+  },
   openGraph: {
     images: "/opengraph-image.png",
   },

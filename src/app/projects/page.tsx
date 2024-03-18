@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import ProjectList from "./_components/ProjectList";
+
+export const metadata: Metadata = {
+  title: "My Projects",
+  description:
+    "Michael Ayeni's projects. This showcases the projects of the coding pastor (thecodingpastor)",
+};
 
 const ProjectsPage = () => {
   return (

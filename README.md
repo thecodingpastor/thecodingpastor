@@ -37,3 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Tools I used
 - Favicon generator - [Real Favicon Generator](https://realfavicongenerator.net)
+
+## Notes
+- Open graph images recommended to be 1200px by 630px
