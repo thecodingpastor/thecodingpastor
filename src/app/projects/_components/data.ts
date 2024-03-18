@@ -115,7 +115,7 @@ export const Projects = [
       "rapid-api",
       "google-recaptcha",
     ],
-    liveSite: "https://www.ireplearning.com.ng/",
+    liveSite: "https://www.sgbc.ng/",
     github: "",
     images: [],
     more: [

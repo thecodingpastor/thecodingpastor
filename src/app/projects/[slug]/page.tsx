@@ -15,7 +15,14 @@ const SingleProjectPage = ({ params }: { params: { slug: string } }) => {
       <h2 className="px-4 text-[48px] text-purple-light text-center font-normal my-10">
         {data.name}
       </h2>
-      <figure className="w-[100vw] h-80 relative mt-14 block">
+      <figure
+        className="w-[100vw] h-80 relative mt-14 block border-t border-b border-slate-100"
+        style={
+          {
+            // boxShadow: "0px 5px 5px 0px rgba(25, 118, 210, 0.09)",
+          }
+        }
+      >
         <Image src={data.image} alt={data.name} fill sizes="500vw" priority />
       </figure>
       <div className="max-w-5xl mx-auto px-4">
