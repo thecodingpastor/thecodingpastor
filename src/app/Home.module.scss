@@ -1,0 +1,13 @@
+.Container {
+  color: white;
+  min-height: calc(100vh - 60px);
+}
+.Inner {
+  @media screen and (max-width: 500px) {
+    min-width: 250px !important;
+    // padding: 0 !important;
+    // margin: 0 !important;
+    margin-left: auto !important;
+    // margin-left: 20px !important;
+  }
+}

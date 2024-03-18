@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-kumbh font-light;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-rozha;
+}
+
+h1 {
+  @apply text-6xl font-bold mb-10;
+}
+
+h2 {
+  @apply text-4xl font-extrabold mb-8;
+}
+h3 {
+  @apply text-3xl font-extrabold mb-3;
+}
+
+h4 {
+  @apply text-[24px] font-bold mb-3;
+}
+
+img {
+  width: auto;
+  object-fit: cover;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #efefef;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: gray;
+}

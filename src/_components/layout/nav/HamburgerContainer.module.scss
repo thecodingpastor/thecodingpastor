@@ -1,0 +1,21 @@
+.Container {
+  display: none;
+  position: fixed;
+  z-index: 900000;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  // background-color: red;
+  // background-color: $color-pry;
+  overflow: hidden;
+  box-shadow: 0 0 5px white;
+
+  @media screen and (max-width: 650px) {
+    display: flex;
+  }
+}

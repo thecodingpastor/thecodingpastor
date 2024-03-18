@@ -1,0 +1,21 @@
+.Container {
+  .Button {
+    border-radius: 33px;
+    width: 100%;
+    background: linear-gradient(297deg, #ffb801 -12.97%, #ffebb8 76.86%);
+    box-shadow: 4px 9px 19.2px 0px rgba(255, 184, 1, 0.19);
+    cursor: pointer;
+    padding: 12px 24px;
+    outline: none;
+    transition: 300ms ease;
+    font-weight: 400;
+    color: black;
+
+    &:hover {
+      width: 105%;
+      padding: 12px 30px;
+      // background: #ebd6ef;
+      box-shadow: 6px 9px 37.7px 0px rgba(193, 113, 211, 0.24);
+    }
+  }
+}

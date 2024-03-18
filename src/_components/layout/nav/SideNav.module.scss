@@ -1,0 +1,128 @@
+.Container {
+  @media screen and (max-width: 650px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 651px) {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .Hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    gap: 7px;
+    cursor: pointer;
+    transition: 300ms;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 11;
+
+    span {
+      width: 30px;
+      height: 2px;
+      background-color: #4c0253;
+
+      &.isDark {
+        background-color: white;
+      }
+    }
+
+    &.Open {
+      gap: 0;
+
+      span:first-of-type {
+        animation: 300ms AnimateTopHamburgerBar forwards;
+      }
+      span:nth-child(2) {
+        display: none;
+      }
+      span:last-of-type {
+        animation: 300ms AnimateBottomHamburgerBar forwards;
+      }
+    }
+  }
+
+  .NavItems {
+    z-index: 11;
+    position: absolute;
+    top: 50px;
+    right: -250px;
+    background-color: white;
+    height: calc(100vh - 50px);
+    transition: 300ms;
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    width: 250px;
+
+    &.Open {
+      right: 0;
+    }
+
+    .Links {
+      width: 100%;
+    }
+
+    a {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      padding: 20px 0;
+      padding-right: 30px;
+      font-weight: 600;
+      color: #4c0253;
+      transition: 300ms;
+    }
+  }
+}
+
+.Backdrop {
+  position: fixed;
+  inset: 0;
+  top: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+
+  @media screen and (max-width: 650px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 651px) {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes AnimateTopHamburgerBar {
+  0% {
+    margin-top: 0;
+    rotate: 0;
+  }
+  100% {
+    margin-top: 3px;
+    rotate: 45deg;
+  }
+}
+@keyframes AnimateBottomHamburgerBar {
+  0% {
+    margin-top: 0;
+    rotate: 0;
+  }
+  100% {
+    margin-top: -3px;
+    rotate: 135deg;
+  }
+}
