@@ -24,7 +24,7 @@ const SendEmail = async ({ html, replyTo }: SendEmailProps) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
-    subject: "Message from anuoluwapomichaelayeni.com",
+    subject: "Message from michaelayeni.com",
     html,
     replyTo,
   };

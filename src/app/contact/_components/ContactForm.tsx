@@ -50,9 +50,12 @@ const ContactForm = () => {
         ref?.current?.reset();
       }
     } catch (err: any) {
+      console.log({ err });
       setToast({
         type: "error",
-        message: err.message || "Unable to send message. Please try later.",
+        message:
+          "Unable to send message. Please check that all fields are properly filled then try again.",
+        // message: err.message || "Unable to send message. Please try later.",
         id: Math.random().toString(),
       });
     }

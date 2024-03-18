@@ -21,14 +21,9 @@ const ProjectList = () => {
                 height: "150px",
               }}
             />
-            <div className="px-2 py-3">
+            <div className="px-5 pt-3 pb-6">
               <div className="flex gap-3 items-center">
-                <figure
-                  className="w-14 h-14 relative rounded-full shrink-0"
-                  style={{
-                    boxShadow: "0px 5px 5px 0px rgba(25, 118, 210, 0.09)",
-                  }}
-                >
+                <figure className="w-14 h-14 relative rounded-full shrink-0">
                   <Image
                     src={project.logo}
                     alt=""
