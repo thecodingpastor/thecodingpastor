@@ -4,11 +4,13 @@ import {
   Akinola,
   EUA,
   Irep,
+  LBC,
   LogoAMA,
   LogoAimee,
   LogoAkinola,
   LogoEUA,
   LogoIrep,
+  LogoLBC,
   LogoSGBC,
   SGBC,
 } from "@/assets";
@@ -162,6 +164,29 @@ export const Projects = [
     more: [
       "This website was built for Aimee Property Services, a real estate company in Lagos, Nigeria. It is a minimalistic website. Visitors can send email messages using emailjs package when they submit the contact form.",
       "The most challenging part of this one-page website is the implementing the various UIs. The parallax is a tricky feature to implement if you want it to work on iOS. I had to work with some blurs and rotate properties in css. All in all, it was relatively easy to accomplish.",
+    ],
+  },
+  {
+    id: "7",
+    name: "Lagos Bible Conference",
+    desc: "The Lagos Bible Conference (LBC) is the annual flagship conference of Sovereign Grace Bible Church (and partners) dedicated to promoting the Bible as God's inerrant and infallible Word through a faithful exposition of it.",
+    image: LBC,
+    logo: LogoLBC,
+    slug: "lbc",
+    liveSite: "https://lagosbibleconference.com/",
+    github: "https://github.com/thecodingpastor/aimee",
+    images: [],
+    stack: [
+      "typescript",
+      "nextjs",
+      "sass",
+      "vercel",
+      "youtube-api-v3",
+      "css modules",
+    ],
+    more: [
+      "The Lagos Bible Conference's website was built with nextjs and typescript and currently hosted on vercel. It is a website that really stretch me for speed as I was on the clock to get the done. The duration needed for it to be completed was two weeks.",
+      "The most challenging part of this website was meeting up with the time line. Thankfully, I did not have to handle the registration for the conference. A third party service, evenito, was employed.",
     ],
   },
 ];

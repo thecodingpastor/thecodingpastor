@@ -44,7 +44,7 @@ const SingleProjectPage = ({ params }: { params: { slug: string } }) => {
             width={100}
             height={100}
             alt=""
-            className="shrink-0 min-w-[200px] bg-slate-100 hidden md:block"
+            className="shrink-0 w-[200px] bg-slate-100 hidden md:block"
             sizes="100vw"
             style={{ objectFit: "contain" }}
           />

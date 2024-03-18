@@ -33,11 +33,9 @@ export default function RootLayout({
         <AppHeader />
         <main className="grow">{children}</main>
         <AppFooter />
-        <ToastContainer />
-
         <div id="modal"></div>
         <div id="backdrop"></div>
-        <div id="Toast"></div>
+        <ToastContainer />
       </body>
     </html>
   );

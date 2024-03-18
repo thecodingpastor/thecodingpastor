@@ -34,7 +34,6 @@ const ContactForm = () => {
   const ref = useRef<HTMLFormElement>(null);
   const toastArray = useBoundStore((state) => state.toastArray);
   const setToast = useBoundStore((state) => state.setToast);
-  console.log({ toastArray });
   // const defaultNotification = { type: "", message: "" };
   // const [Notification, setNotification] = useState(defaultNotification);
 
@@ -52,6 +51,7 @@ const ContactForm = () => {
       }
     } catch (err: any) {
       setToast({
+        type: "error",
         message: err.message || "Unable to send message. Please try later.",
         id: Math.random().toString(),
       });
@@ -69,20 +69,6 @@ const ContactForm = () => {
       )}
 
       <SubmitButton />
-
-      {/* {Notification?.type === "success" && (
-        <NotificationModal
-          message="Thank you for reaching out. We will be in touch as soon as we can."
-          close={() => setNotification(defaultNotification)}
-        />
-      )} */}
-      {/* {Notification.type === "error" && (
-        <ErrorToast
-          message="Message not sent! Please check the fields and try again."
-          // message={Notification?.message}
-          close={() => setNotification(defaultNotification)}
-        />
-      )} */}
     </form>
   );
 };

@@ -33,11 +33,15 @@ const createUISlice: StateCreator<
   ],
   setToast(toast) {
     set((state) => {
-      if (state.toastArray.length >= 5) {
-        // This ensures toastArray is not more than 5
-        return { toastArray: [toast, ...state.toastArray.splice(0, 4)] };
+      // This prevents duplicate error messages
+      if (!state.toastArray.find((prev) => prev.message === toast.message)) {
+        if (state.toastArray.length >= 5) {
+          // This ensures toastArray is not more than 5
+          return { toastArray: [toast, ...state.toastArray.splice(0, 4)] };
+        }
+        return { toastArray: [toast, ...state.toastArray] };
       }
-      return { toastArray: [toast, ...state.toastArray] };
+      return state;
     });
   },
   clearAllToasts: () => {

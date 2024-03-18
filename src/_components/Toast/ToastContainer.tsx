@@ -1,8 +1,5 @@
 "use client";
 
-import ReactDOM from "react-dom";
-import { VscCloseAll } from "react-icons/vsc";
-
 import { ToastType } from "@/app/store/types";
 
 import Toast from "./Toast";
@@ -29,7 +26,6 @@ const ToastContainer = () => {
   const clearAllToasts = useBoundStore((state) => state.clearAllToasts);
   const removeToast = useBoundStore((state) => state.removeToast);
   const toastArray = useBoundStore((state) => state.toastArray);
-  console.log({ toastArray });
 
   return (
     <div className={classes.Container} data-position="top-right">
@@ -37,19 +33,15 @@ const ToastContainer = () => {
         <span className={classes.CloseAll} onClick={clearAllToasts}>
           Close All
         </span>
-        // <span>
-        //   <VscCloseAll className={classes.CloseAll} onClick={clearAllToasts} />
-        // </span>
       )}
       {toastArray.map((toast) => {
-        console.log({ toast });
         return (
           <Toast
             key={toast.id}
             IsError={toast.type === "error"}
             content={toast.message}
             onClose={() => removeToast(toast.id)}
-            closeAfter={toast.type === "error" ? 30000 : 7000}
+            closeAfter={toast.type === "error" ? 20000 : 7000}
           />
         );
       })}

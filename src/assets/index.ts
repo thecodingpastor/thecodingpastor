@@ -20,6 +20,8 @@ import SGBC from "@/assets/sgbc.webp";
 import LogoSGBC from "@/assets/logo-sgbc.webp";
 import EUA from "@/assets/eua.webp";
 import LogoEUA from "@/assets/logo-eua.svg";
+import LBC from "@/assets/lbc.webp";
+import LogoLBC from "@/assets/logo-lbc.webp";
 
 export {
   NotFound,
@@ -44,4 +46,6 @@ export {
   LogoAimee,
   EUA,
   LogoEUA,
+  LBC,
+  LogoLBC,
 };

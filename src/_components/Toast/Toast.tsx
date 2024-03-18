@@ -24,8 +24,7 @@ const Toast: React.FC<IProps> = ({
   const [IsPaused, setIsPaused] = useState(false);
   const [ToastIsVisible, setToastIsVisible] = useState(false);
   const [CountDown, setCountDown] = useState(closeAfter);
-
-  console.log({ IsError, content, closeAfter });
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -47,12 +46,11 @@ const Toast: React.FC<IProps> = ({
   };
 
   useEffect(() => {
-    let timer: NodeJS.Timeout; //formerly NodeJS.Timer, check???
+    let timer: NodeJS.Timeout;
 
-    if (!IsPaused) {
+    if (!IsPaused && !isHovered) {
       timer = setInterval(() => {
-        setCountDown((prev: any) => {
-          // I had to do this hack to ensure the animations work
+        setCountDown((prev) => {
           if (prev < 2000) setToastIsVisible(false);
           return prev - 1000;
         });
@@ -62,14 +60,16 @@ const Toast: React.FC<IProps> = ({
     return () => {
       clearInterval(timer);
     };
-  }, [IsPaused]);
+  }, [IsPaused, isHovered]);
 
   const handleMouseEnter = () => {
-    setIsPaused(true);
+    setIsHovered(true);
     setToastIsVisible(true);
+    setIsPaused(true);
   };
 
   const handleMouseLeave = () => {
+    setIsHovered(false);
     setIsPaused(false);
   };
 
