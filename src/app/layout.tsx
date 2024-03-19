@@ -8,6 +8,12 @@ import "./globals.css";
 import ToastContainer from "@/_components/Toast/ToastContainer";
 
 export const metadata: Metadata = {
+  // robots:  {
+  //   index: false, // I dont want google to index (show) this page
+  //   follow:true, // But I went web crawlers to crawl this page
+  //  // this is mostly used for privacy policy pages
+  // },
+  // to check which pages have been indexed on google site:domainname (without https or www) e.g. site:michaelayeni.com
   title: {
     template: "%s - Michael Ayeni",
     default: "Michael Ayeni",
