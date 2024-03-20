@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "coding pastor",
     "the coding pastor",
     "codingpastor",
-    "thecodingpasto",
+    "thecodingpastor",
     "Michael Ayeni",
     "Ayeni Michael",
   ],
