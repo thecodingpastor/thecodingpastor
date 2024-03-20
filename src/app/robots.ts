@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      // disallow: ["/privacy","/admin" ]
+      disallow: ["/privacy", "/admin"],
     },
 
     sitemap: "https://michaelayeni.com/sitemap.xml",

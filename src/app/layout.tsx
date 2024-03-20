@@ -23,6 +23,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  keywords: [
+    "coding pastor",
+    "the coding pastor",
+    "codingpastor",
+    "thecodingpasto",
+    "Michael Ayeni",
+    "Ayeni Michael",
+  ],
   openGraph: {
     images: "/opengraph-image.png",
   },
