@@ -1,7 +1,15 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import classes from "./template.module.scss";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
-  return <div className={classes.Container}>{children}</div>;
+  const pathname = usePathname();
+  return (
+    <div className={classes.Container} key={pathname}>
+      {children}
+    </div>
+  );
 };
 
 export default Template;

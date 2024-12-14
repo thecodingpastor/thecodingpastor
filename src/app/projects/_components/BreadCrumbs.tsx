@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/_components/Link";
 
 const BreadCrumbs = ({ name }: { name: string }) => {
   return (

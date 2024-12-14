@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "../Link";
 import classes from "./Button.module.scss";
 
 interface ButtonProps {

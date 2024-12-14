@@ -22,9 +22,17 @@ import EUA from "@/assets/eua.webp";
 import LogoEUA from "@/assets/logo-eua.svg";
 import LBC from "@/assets/lbc.webp";
 import LogoLBC from "@/assets/logo-lbc.webp";
+import TeamBondingLogo from "@/assets/logo-teambonding.webp";
+import TeamBonding from "@/assets/teambonding.webp";
+import FoodBridgeLogo from "@/assets/logo-foodbridge.svg";
+import FoodBridge from "@/assets/foodbridge.webp";
 
 export {
   NotFound,
+  TeamBondingLogo,
+  FoodBridge,
+  FoodBridgeLogo,
+  TeamBonding,
   Head,
   BG_Home,
   Logo_Dark,

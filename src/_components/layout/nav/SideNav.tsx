@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import navData from "./navData";
 import classes from "./SideNav.module.scss";
-import HamburgerContainer from "./HamburgerContainer";
+// import HamburgerContainer from "./HamburgerContainer";
 import { usePathname } from "next/navigation";
+import { Link } from "@/_components/Link";
 
 const SideNav = () => {
   const [Open, setOpen] = useState(false);

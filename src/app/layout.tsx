@@ -6,6 +6,7 @@ import AppFooter from "@/_components/layout/AppFooter";
 
 import "./globals.css";
 import ToastContainer from "@/_components/Toast/ToastContainer";
+import RouteLoadingProvider from "@/_components/loaders/RouteLoadingProvider";
 
 export const metadata: Metadata = {
   // robots:  {
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
     "The official website of Michael Ayeni, a full stack developer. Works with Node, React, React Native, Typescript, MongoDB, MySQL. He is also know as the coding pastor (thecodingpastor)",
   twitter: {
     card: "summary_large_image",
+  },
+  verification: {
+    google: "",
   },
   keywords: [
     "coding pastor",
@@ -47,12 +51,14 @@ export default function RootLayout({
       <body
         className={`${kumbh} ${rozha} flex flex-col min-h-[100vh] overflow-x-hidden `}
       >
-        <AppHeader />
-        <main className="grow">{children}</main>
-        <AppFooter />
-        <div id="modal"></div>
-        <div id="backdrop"></div>
-        <ToastContainer />
+        <RouteLoadingProvider>
+          <AppHeader />
+          <main className="grow">{children}</main>
+          <AppFooter />
+          <div id="modal"></div>
+          <div id="backdrop"></div>
+          <ToastContainer />
+        </RouteLoadingProvider>
       </body>
     </html>
   );

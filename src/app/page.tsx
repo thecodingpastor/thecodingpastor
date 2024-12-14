@@ -4,6 +4,7 @@ import { BG_Home } from "@/assets";
 import Button from "@/_components/form/Button";
 
 import classes from "./Home.module.scss";
+import Typewriter from "@/_components/typewriter";
 
 export default function Home() {
   let background: React.ReactNode;
@@ -52,7 +53,7 @@ export default function Home() {
   return (
     <div className={classes.Container}>
       <div className="absolute top-1/2 sm:left-1/2 sm:-translate-x-1/2 -translate-y-1/2 ">
-        <h2 className="font-medium text-[50px] sm:text-[64px] md:text-[80px]  text-center">
+        <h2 className="font-medium text-[50px] sm:text-[64px] md:text-[80px]  text-center head-animate">
           Hi there!
         </h2>
 
@@ -68,12 +69,13 @@ export default function Home() {
           }
         >
           <div className="relative py-6">
-            <p>
-              I’m Mike, a passionate Full Stack Web Developer based in Lagos,
+            <Typewriter
+              text="I’m Mike, a passionate Full Stack Web Developer based in Lagos,
               Nigeria, with a flair for creating seamless user experiences and
               robust backend solutions. I specialize in bringing bold ideas to
-              life in the digital world.
-            </p>
+              life in the digital world."
+              as="p"
+            />
             <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
               <Button href="/about" text="Learn More" />
             </div>

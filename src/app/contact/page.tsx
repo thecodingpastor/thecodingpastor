@@ -1,6 +1,7 @@
 import { Contact, MobileContact } from "@/assets";
 import Image from "next/image";
 import ContactForm from "./_components/ContactForm";
+import AnimatedInView from "@/_components/animations";
 
 const ContactPage = () => {
   return (
@@ -13,10 +14,10 @@ const ContactPage = () => {
       </figure>
 
       <div className="max-w-[500px] md:max-w-3xl mx-auto px-4 mt-20">
-        <h2 className=" font-normal text-[64px] text-purple-light">
+        <h2 className=" font-normal text-[64px] text-purple-light head-animate">
           Let&apos;s Connect
         </h2>
-        <p className="mb-8 mt-16">
+        <AnimatedInView y={20} opacity={0.6} className="mb-8 mt-16">
           My portfolio, a testament to my professional journey, is accessible on{" "}
           <a
             href="https://linkedin.com/in/michael-ayeni"
@@ -42,11 +43,11 @@ const ContactPage = () => {
           >
             thecodingpastor@gmail.com
           </a>
-        </p>
-        <p>
+        </AnimatedInView>
+        <AnimatedInView y={20} opacity={0.6}>
           I look forward to the opportunity to bring innovation and expertise to
           your next project.
-        </p>
+        </AnimatedInView>
 
         <div className="max-w-2xl md:max-w-3xl mx-auto my-20">
           <ContactForm />

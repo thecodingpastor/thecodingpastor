@@ -66,7 +66,7 @@ export default async function Image() {
             Michael Ayeni - The Coding Pastor
           </div>
           <div
-            tw="flex mt-6 flex-wrap space-x-10 items-center text-4xl text-neutral-50"
+            // tw="flex mt-6 flex-wrap space-x-10 items-center text-4xl text-neutral-50"
             style={{
               display: "flex",
               flexWrap: "wrap",

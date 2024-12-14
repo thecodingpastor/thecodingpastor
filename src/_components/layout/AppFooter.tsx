@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
 import classes from "./AppFooter.module.scss";
+import { Link } from "../Link";
 
 const socials = [
   {

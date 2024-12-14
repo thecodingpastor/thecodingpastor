@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import SideNav from "./SideNav";
 import { usePathname } from "next/navigation";
@@ -11,6 +10,8 @@ import navData from "./navData";
 import { Logo_Dark, Logo_Light } from "@/assets";
 
 import classes from "./AppHeader.module.scss";
+import AnimatedInView from "@/_components/animations";
+import { Link } from "@/_components/Link";
 
 const AppHeader = () => {
   const [ActiveLink, setActiveLink] = useState("");
@@ -40,15 +41,16 @@ const AppHeader = () => {
           classes.NavItems + " flex gap-6 items-center font-medium font-kumbh"
         }
       >
-        {navData.map((link) => (
-          <Link
-            href={link.href}
-            key={link.id}
-            className={ActiveLink.includes(link.href) ? classes.Active : ""}
-            onClick={() => setActiveLink(link.href)}
-          >
-            {link.label}
-          </Link>
+        {navData.map((link, index) => (
+          <AnimatedInView opacity={0} delay={index * 0.2} key={link.id}>
+            <Link
+              href={link.href}
+              className={ActiveLink.includes(link.href) ? classes.Active : ""}
+              onClick={() => setActiveLink(link.href)}
+            >
+              {link.label}
+            </Link>
+          </AnimatedInView>
         ))}
       </ul>
       <SideNav />

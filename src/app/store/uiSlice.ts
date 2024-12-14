@@ -7,16 +7,14 @@ import {
   UISliceProps,
 } from "./types";
 
-const createUISlice: StateCreator<
-  UISliceProps,
-  [],
-  [],
-  UISliceProps
-  //   PackageSliceProps & WishlistSliceProps & CartSliceProps & UISliceProps,
-  //   [],
-  //   [],
-  //   UISliceProps
-> = (set) => ({
+const createUISlice: StateCreator<UISliceProps, [], [], UISliceProps> = (
+  set
+) => ({
+  typingPlayed: false,
+  routeLoading: false,
+  setRouteLoading(routeLoading) {
+    set({ routeLoading });
+  },
   toastArray: [
     // {
     //   id: "1",
@@ -51,6 +49,9 @@ const createUISlice: StateCreator<
     set((state) => ({
       toastArray: state.toastArray.filter((not: ToastType) => id !== not.id),
     }));
+  },
+  setTypingPlayed: (bool) => {
+    set({ typingPlayed: bool });
   },
   modalIsOpen: false,
   setModalIsOpen(isOpen) {

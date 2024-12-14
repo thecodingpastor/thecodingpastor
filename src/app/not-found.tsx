@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 import { NotFound } from "@/assets";
-import Link from "next/link";
 import { MdOutlineArrowBack } from "react-icons/md";
+import { Link } from "@/_components/Link";
 
 const NotFoundPage = () => {
   return (

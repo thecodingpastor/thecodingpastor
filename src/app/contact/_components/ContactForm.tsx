@@ -6,6 +6,7 @@ import ContactTextArea from "./ContactTextArea";
 import { submitForm } from "@/app/actions";
 import SubmitButton from "./SubmitButton";
 import useBoundStore from "@/app/store";
+import AnimatedInView from "@/_components/animations";
 
 const formData = [
   {
@@ -32,7 +33,7 @@ const formData = [
 
 const ContactForm = () => {
   const ref = useRef<HTMLFormElement>(null);
-  const toastArray = useBoundStore((state) => state.toastArray);
+  // const toastArray = useBoundStore((state) => state.toastArray);
   const setToast = useBoundStore((state) => state.setToast);
   // const defaultNotification = { type: "", message: "" };
   // const [Notification, setNotification] = useState(defaultNotification);
@@ -50,7 +51,7 @@ const ContactForm = () => {
         ref?.current?.reset();
       }
     } catch (err: any) {
-      console.log({ err });
+      // console.log({ err });
       setToast({
         type: "error",
         message:
@@ -63,11 +64,27 @@ const ContactForm = () => {
 
   return (
     <form action={handleSubmit} ref={ref} className="font-kumbh">
-      {formData.map((item) =>
+      {formData.map((item, index) =>
         item.name !== "message" ? (
-          <ContactInput key={item.name} {...item} />
+          <AnimatedInView
+            key={item.name}
+            opacity={0.7}
+            scale={0.95}
+            delay={index * 0.1}
+            threshold={0.2}
+          >
+            <ContactInput {...item} />
+          </AnimatedInView>
         ) : (
-          <ContactTextArea key={item.name} {...item} />
+          <AnimatedInView
+            key={item.name}
+            opacity={0.7}
+            scale={0.95}
+            delay={index * 0.1}
+            threshold={0.2}
+          >
+            <ContactTextArea {...item} />
+          </AnimatedInView>
         )
       )}
 
