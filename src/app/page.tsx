@@ -64,7 +64,7 @@ export default function Home() {
             backdropFilter: "blur(11px)",
           }}
           className={
-            "sm:min-w-[500px] rounded-[30px] px-[20px] py-[30px] text-center " +
+            "w-[100vw] sm:w-auto sm:min-w-[500px] rounded-[30px] px-[20px] py-[30px] text-center " +
             classes.Inner
           }
         >
