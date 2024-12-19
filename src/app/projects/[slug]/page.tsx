@@ -116,9 +116,9 @@ const SingleProjectPage = ({
         <div className="flex flex-col gap-10 items-center md:flex-row md:gap-0 md:items-stretch justify-between mt-20">
           <Button text="Back" href="/projects" />
           {data.github && (
-            <Button target="_blank" text="Github Repo" href={data.github} />
+            <Button target="__blank" text="Github Repo" href={data.github} />
           )}
-          <Button text="View Live Site" href={data.liveSite} target="_blank" />
+          <Button text="View Live Site" href={data.liveSite} target="__blank" />
         </div>
       </div>
     </div>

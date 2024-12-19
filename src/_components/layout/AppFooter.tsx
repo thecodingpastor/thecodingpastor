@@ -48,7 +48,7 @@ const AppFooter = () => {
         <div className={classes.Contact}>
           Contact me on:{" "}
           {socials.map((item) => (
-            <Link key={item.id} href={item.link} target="_blank">
+            <Link key={item.id} href={item.link} target="__blank">
               {item.icon}
             </Link>
           ))}

@@ -8,7 +8,7 @@ interface ButtonProps {
   style?: object;
   href?: string;
   onClick?: () => void;
-  target?: "_blank" | "";
+  target?: "__blank" | "";
   disabled?: boolean;
 }
 
@@ -23,7 +23,13 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   let content: React.ReactNode;
 
-  if (href) {
+  if (target === "__blank") {
+    content = (
+      <a href={href} className={classes.Button + " font-kumbh"} target="_blank">
+        {text}
+      </a>
+    );
+  } else if (href) {
     content = (
       <Link
         href={href}

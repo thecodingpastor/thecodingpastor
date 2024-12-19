@@ -19,7 +19,6 @@ import {
   TeamBondingLogo,
 } from "@/assets";
 
-// akinola, aimee, anu, ekom, sgbc, lbc, irep, irep 2, foodbridge, colonees,
 export const Projects = [
   {
     id: "9",
@@ -29,21 +28,23 @@ export const Projects = [
     logo: FoodBridgeLogo,
     slug: "foodbridge",
     stack: [
+      "nextjs",
       "zustand",
       "react-hook-form",
-      "shadcn",
       "tailwind",
       "typescript",
       "vercel",
       "railway",
+      "husky",
+      "google-analytics",
     ],
     liveSite: "https://www.foodbridgeng.com",
     github: "",
     images: [],
     more: [
-      "The ecommerce section of ",
-      "Visitors to this website can view different bonding packages and categories. The can also view the public images of these events. There is also an also an admin login dashboard where the admin can upload images and descriptions of events.",
-      "My major achievement as a developer building this app was that I built a re-usable react component for animations, so all the animations on this website were built without any framework.",
+      "The frontend ecommerce section of the foodbridgeng webiste was entirely built by me with next.js 14 and Typescript, as it was previously written in an older version. As at the time it went live, it was the most complex app I had worked on by far. There were countless endpoints to consume, each with its own unique requirements for manipulation of data.",
+      "I was able to set up the app from scratch with husky, eslint and a few safety guards to minimize errors to the bearest minimum.",
+      "My major take away as a developer building this app was that I built a lot of re-usable react components and applied the best practices in building a modern web app from scratch.",
     ],
   },
   {
