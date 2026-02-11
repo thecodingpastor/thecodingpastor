@@ -41,11 +41,11 @@ export default function Home() {
           zIndex: "-1",
         }}
       >
-        <source
+        {/* <source
           src="https://utfs.io/f/92977a7b-c4be-4a5d-b5c8-2f95ac424805-z2yfg9.mp4"
           type="video/mp4"
-        />
-        {/* <source src="back_vid.mp4" type="video/mp4" /> */}
+        /> */}
+        <source src="back_vid.mp4" type="video/mp4" />
       </video>
     );
   }
@@ -60,7 +60,7 @@ export default function Home() {
         <div
           style={{
             border: "1px solid rgba(255, 255, 255, 0.20)",
-            background: "rgba(0, 0, 0, 0.02)",
+            background: "rgba(0, 0, 0, 0.5)",
             backdropFilter: "blur(11px)",
           }}
           className={
@@ -75,6 +75,7 @@ export default function Home() {
               robust backend solutions. I specialize in bringing bold ideas to
               life in the digital world."
               as="p"
+              className="font-normal"
             />
             <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
               <Button href="/about" text="Learn More" />

@@ -8,15 +8,15 @@ const journey = [
   {
     header: "Professional Journey",
     items: [
-      "My foray into the world of technology began six years ago. Self-taught and driven by an insatiable curiosity about the intricacies of computer applications, I embarked on a journey that started with Vanilla PHP. This 18-month immersion laid the groundwork for my transition into the expansive universe of JavaScript.",
-      "Today, I am proficient in a suite of cutting-edge technologies, including NodeJS, Express JS, NextJS, TypeScript, TailwindCSS, Zustand, Redux Toolkit, React Query, ReactJS, MongoDB and MySQL. My expertise extends to front-end aesthetics and back-end functionality, ensuring a seamless user experience. Committed to staying at the forefront of technology, I am currently exploring AWS, Docker, Kubernetes, and React Native.",
+      "My foray into the world of technology began in 2017. Self-taught and driven by an insatiable curiosity about the intricacies of computer applications, I embarked on a journey that started with Vanilla PHP. This 18-month immersion laid the groundwork for my transition into the expansive universe of JavaScript.",
+      "Today, I am proficient in a suite of cutting-edge technologies, including NodeJS, Express JS, Golang (for backend and building apis) and Sveltekit, NextJS, TypeScript, TailwindCSS, Zustand, Redux Toolkit, React Query and vanilla ReactJS (for the frontend). I work with both relational (PostgreSQL and MySQL) and non-relational (MongoDB and Redis) databases. My expertise extends to front-end aesthetics and back-end functionality, ensuring a seamless user experience. Committed to staying at the forefront of technology, I am currently getting more rooted in AWS, Docker, Kubernetes, and React Native.",
     ],
   },
   {
     header: "Current Endeavours",
     items: [
       "As a freelance developer, my goal is to contribute to transformative projects within a leading tech organization. I am keen on roles that challenge me and allow me to leverage my full stack development skills to create impactful solutions.",
-      "As of March 2024, I work in a team of 5 engineers on a part-time basis to build a cutting-edge start-up.",
+      "As of March 2024, I work in a team of 4 engineers on a part-time basis to build a cutting-edge start-up where I lead the team till this day. I also co-founded the educational platform of the century (itslearningtime) where learners from the ages of 3 - 17 years can have access to quality and affordable education.",
     ],
   },
   {
@@ -29,6 +29,8 @@ const journey = [
 
 export const metadata: Metadata = {
   title: "About",
+  description:
+    " I am Michael Ayeni, a dedicated full stack web developer from Lagos Nigeria, with a profound commitment to crafting exceptional digital experiences. My professional ethos is deeply rooted in both my faith and my love for innovative technology.",
 };
 const AboutPage = () => {
   return (

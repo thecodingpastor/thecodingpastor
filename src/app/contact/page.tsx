@@ -2,6 +2,11 @@ import { Contact, MobileContact } from "@/assets";
 import Image from "next/image";
 import ContactForm from "./_components/ContactForm";
 import AnimatedInView from "@/_components/animations";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 const ContactPage = () => {
   return (

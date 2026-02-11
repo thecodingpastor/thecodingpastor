@@ -26,10 +26,30 @@ import TeamBondingLogo from "@/assets/logo-teambonding.webp";
 import TeamBonding from "@/assets/teambonding.webp";
 import FoodBridgeLogo from "@/assets/logo-foodbridge.svg";
 import FoodBridge from "@/assets/foodbridge.webp";
+import Algokids from "@/assets/algokids.webp";
+import AlgorithmicsLogo from "@/assets/algorithmics-logo.png";
+import Cropsafe from "@/assets/cropsafe.webp";
+import CropsafeLogo from "@/assets/cropsafe-logo.webp";
+import Cornerstone from "@/assets/cornerstone.webp";
+import CornerstoneLogo from "@/assets/cornerstone-logo.png";
+import WeMove from "@/assets/wemove.webp";
+import WeMoveLogo from "@/assets/wemove-logo.png";
+import ItsLearningTimeLogo from "@/assets/itslearningtime-logo.png";
+import ItsLearningTime from "@/assets/itslearningtime.webp";
 
 export {
   NotFound,
+  ItsLearningTime,
+  ItsLearningTimeLogo,
   TeamBondingLogo,
+  Algokids,
+  AlgorithmicsLogo,
+  Cornerstone,
+  CornerstoneLogo,
+  Cropsafe,
+  CropsafeLogo,
+  WeMove,
+  WeMoveLogo,
   FoodBridge,
   FoodBridgeLogo,
   TeamBonding,

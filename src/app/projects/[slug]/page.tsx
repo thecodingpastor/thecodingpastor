@@ -74,8 +74,8 @@ const SingleProjectPage = ({
       <h2 className="px-4 text-[36px] sm:text-[48px] text-purple-light text-center font-normal my-10 head-animate">
         {data.name}
       </h2>
-      <figure className="w-[100vw] h-80 relative mt-14 block border-t border-b border-slate-100">
-        <Image src={data.image} alt={data.name} fill sizes="500vw" priority />
+      <figure className="w-[100vw] relative h-full mt-14 block border-y-2 border-slate-400">
+        <Image src={data.image} alt={data.name} sizes="500vw" priority />
       </figure>
       <div className="max-w-5xl mx-auto px-4">
         <AnimatedInView y={20}>
