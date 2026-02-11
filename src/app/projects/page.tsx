@@ -13,7 +13,7 @@ const ProjectsPage = () => {
     <div className="pt-28">
       <div className="max-w-[1100px] px-4 mx-auto">
         <h2 className="text-5xl lg:text-[64px] text-purple-light font-normal px-4 head-animate">
-          The Works of "The Coding Pastor"
+          The Works of &apos;The Coding Pastor&apos;
         </h2>
         <AnimatedInView opacity={0} y={20}>
           Explore my portfolio to see a blend of creativity and technical
